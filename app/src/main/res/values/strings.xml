@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">TrocaTela-pos2025</string>
     <string name="lancamento">Lançamento</string>
+    <string name="cod">Cod.</string>
+    <string name="qtd">Qtd.</string>
+    <string name="valor">Valor:</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="listar">Listar</string>
 </resources>
