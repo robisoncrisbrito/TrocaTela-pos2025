@@ -1,6 +1,9 @@
 package br.edu.utfpr.trocatela_pos2025
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -26,5 +29,16 @@ class ConfirmarActivity : AppCompatActivity() {
         tvQtd.setText( qtd )
         tvValor.setText( valor )
 
+    }
+
+    fun btEnviarOnClick(view: View) {
+        val sms_body = "cod: ${tvCod.text} qtd: ${tvQtd.text}  valor: ${tvValor.text}"
+        val phone_number = "sms:+5546991124391"
+
+        val intent = Intent( Intent.ACTION_VIEW )
+        intent.setData( Uri.parse( phone_number ) )
+        intent.putExtra( "sms_body", sms_body )
+
+        startActivity( intent )
     }
 }
